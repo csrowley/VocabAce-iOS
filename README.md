@@ -7,18 +7,19 @@
   <p>Master your vocabulary with engaging quizzes and AI-driven sentence practice.</p>
 
   <!-- App Store Badge -->
-  <a href="https://apps.apple.com/us/app/vocab-ace/id123456789">
-    <img src="https://via.placeholder.com/250x83.png?text=Download+on+the+App+Store" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
+  <a href="https://apps.apple.com/us/app/vocab-ace/id6739515538?platform=iphone">
+    <img src="https://github.com/csrowley/VocabAce/blob/main/imagef/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
   </a>
 </div>
 
 ## 📱 In-App Screenshots
 <div align="center">
-  <img src="https://via.placeholder.com/200" width="200" alt="Home Screen">
-  <img src="https://via.placeholder.com/200" width="200" alt="Quiz Mode">
-  <img src="https://via.placeholder.com/200" width="200" alt="Sentence Practice">
+  <img src="https://github.com/csrowley/VocabAce/blob/main/images2/1.png" width="200" alt="Home Screen">
+  <img src="https://github.com/csrowley/VocabAce/blob/main/images2/2.png" width="200" alt="Saved">
+  <img src="https://github.com/csrowley/VocabAce/blob/main/images2/3.png" width="200" alt="Quiz Mode">
+  <img src="https://github.com/csrowley/VocabAce/blob/main/images2/4.png" width="200" alt="Modes">
+  <img src="https://github.com/csrowley/VocabAce/blob/main/images2/5.png" width="200" alt="Categories">
 </div>
-
 ### Interactive Learning Modes
 - **Daily Word Practice**: Expand your vocabulary with thousands of words.
 - **Multiple Choice Quizzes**: Test your knowledge with fun and engaging multiple choice quizzes.
