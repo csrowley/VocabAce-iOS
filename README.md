@@ -20,6 +20,8 @@
   <img src="https://github.com/csrowley/VocabAce/blob/main/images2/4.png" width="200" alt="Modes">
   <img src="https://github.com/csrowley/VocabAce/blob/main/images2/5.png" width="200" alt="Categories">
 </div>
+
+
 ### Interactive Learning Modes
 - **Daily Word Practice**: Expand your vocabulary with thousands of words.
 - **Multiple Choice Quizzes**: Test your knowledge with fun and engaging multiple choice quizzes.
