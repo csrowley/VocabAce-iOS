@@ -3,126 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VocabAce - Your Language Companion</title>
+  <title>VocabAce - Your Language Learning Companion</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
+    :root {
+      --primary-blue: rgb(65, 113, 174);
+      --accent-pink: rgb(195, 136, 134);
     }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
     header {
-      background-color: #4E73DF;
-      color: #fff;
-      padding: 1em;
+      background-color: white;
+      padding: 1rem 5%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    nav a {
-      margin-left: 1em;
-      color: #fff;
+    
+    .logo-container {
+      width: 150px;
+    }
+    
+    .logo-container img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .nav-links a {
+      margin-left: 2rem;
       text-decoration: none;
-      font-weight: bold;
+      color: var(--primary-blue);
+      font-weight: 500;
+      transition: color 0.3s;
     }
+    
+    .nav-links a:hover {
+      color: var(--accent-pink);
+    }
+    
     .hero {
-      background: #f4f4f4;
-      padding: 3em 1em;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-    h2 {
-      color: #4E73DF;
-    }
-    footer {
-      background-color: #4E73DF;
+      margin-top: 80px;
+      padding: 6rem 5%;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-pink));
       color: white;
       text-align: center;
-      padding: 1em;
-      margin-top: 2em;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .hero-text {
+      flex: 1;
+      text-align: left;
+      padding-right: 3rem;
+    }
+    
+    .hero-image {
+      flex: 1;
+      min-height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .app-store-badge {
+      width: 200px;
+      height: auto;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+    
+    .app-store-badge:hover {
+      transform: translateY(-2px);
+    }
+    
+    .features {
+      padding: 5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .features h2 {
+      text-align: center;
+      color: var(--primary-blue);
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      padding: 2rem;
+      text-align: center;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.5rem;
+      background: var(--primary-blue);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+    
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      padding: 3rem 5%;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    
+    footer p {
+      margin-bottom: 1rem;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: opacity 0.3s;
+    }
+    .logo-container {
+        width: 7%;
+        min-width: 50px;
+        max-width: 150px;
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: auto;
+    }
+    footer a:hover {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-text {
+        padding-right: 0;
+        margin-bottom: 3rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero {
+        padding: 4rem 5%;
+      }
+      
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>VocabAce</h1>
     <nav>
-      <a href="#info">General Info</a>
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#support">Support</a>
+      <div class="logo-container">
+        <img src="file.png" alt="VocabAce Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
   
-  <div class="hero">
-    <h2>Expand Your Vocabulary, Fast!</h2>
-    <p>Your friendly companion in learning new words and languages.</p>
-  </div>
-
-  <section id="info">
-    <h2>General Info</h2>
-    <p>
-      VocabAce helps you learn and retain new words through engaging activities and personalized challenges.
-    </p>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Practice English with Vocab Ace</h1>
+        <p>Your intelligent companion for vocabulary expansion. Learn faster, remember longer, and speak confidently.</p>
+        <a href="#" class="app-store-link">
+          <img src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="app-store-badge">
+        </a>
+      </div>
+      <div class="hero-image">
+        <!-- Replace with actual app screenshot -->
+      </div>
+    </div>
   </section>
-
-  <section id="privacy">
-    <h2>Privacy Policy</h2>
-    <h3>Introduction</h3>
-    <p>
-      VocabAce is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and handle your information when you use our mobile application ("the App"). By using the App, you agree to the practices outlined in this policy.
-    </p>
-    <h3>Information We Collect</h3>
-    <p>
-      We collect minimal personal information necessary for authentication and functionality. Specifically, the following data is processed:
-    </p>
-    <ul>
-      <li><strong>Email Address:</strong> Collected and stored via Firebase Authentication for account creation and login purposes.</li>
-      <li><strong>Usage Data:</strong> Anonymized data about how you interact with the App, such as features accessed, session duration, and error logs, may be collected to improve performance.</li>
-      <li><strong>Third-Party Services:</strong></li>
-      <ul>
-        <li><strong>Firebase Authentication:</strong> Used to securely manage user accounts and sign-in credentials, including email addresses.</li>
-        <li><strong>Superwall:</strong> Handles in-app purchases and processes minimal purchase-related data for validation.</li>
-      </ul>
-    </ul>
-    <h3>How We Use Your Information</h3>
-    <p>The information collected is used to:</p>
-    <ul>
-      <li>Provide and improve the App’s features.</li>
-      <li>Secure the App against fraudulent access.</li>
-      <li>Process and manage in-app purchases and subscriptions.</li>
-      <li>Perform analytics to enhance the user experience.</li>
-    </ul>
-    <h3>Data Security</h3>
-    <p>
-      We prioritize the security of your data. All interactions with Firebase and Superwall are encrypted. We do not store sensitive user data beyond authentication credentials handled by Firebase.
-    </p>
-    <h3>Your Privacy Rights</h3>
-    <p>
-      If you wish to delete your account or remove your authentication data, you may do so through the app settings or by contacting us directly at <a href="mailto:vocabaceapp@gmail.com">vocabaceapp@gmail.com</a>.
-    </p>
-    <h3>Changes to This Privacy Policy</h3>
-    <p>
-      We may update this Privacy Policy from time to time. Changes will be effective immediately upon posting. We encourage you to review this policy periodically.
-    </p>
-    <h3>Contact Us</h3>
-    <p>
-      If you have any questions or concerns, please contact us at <a href="mailto:help@vocabace.com">help@vocabace.com</a>.
-    </p>
+  
+  <section class="features">
+    <h2>Why Choose VocabAce?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Learn Words Daily</h3>
+        <p>Learn vocabulary at your own pace, and tune in for the Word of the Day.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎙️</div>
+        <h3>Pronunciation Mastery</h3>
+        <p>Become a native speaker and master english pronuncation, with instant feedback!</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Quiz and Practice</h3>
+        <p>Internalize the words you've learned with quiz modes such as multiple choice, flash cards, writing practice, and more!</p>
+      </div>
+    </div>
   </section>
-
-  <section id="support">
-    <h2>Support</h2>
-    <p>
-      Need assistance? Email us at <a href="mailto:help@vocabace.com">help@vocabace.com</a>.
-    </p>
-  </section>
-
+  
   <footer>
-    <p>© 2025 Christopher Rowley.</p>
+    <p>© 2025 VocabAce. All rights reserved.</p>
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+      <a href="mailto:help@vocabace.com">Contact Us</a>
+    </div>
   </footer>
 </body>
 </html>
